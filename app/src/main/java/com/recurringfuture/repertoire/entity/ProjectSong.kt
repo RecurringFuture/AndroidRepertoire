@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.ForeignKey
 
 @Entity(
-    tableName = "project_song_join",
+    tableName = "project_song",
     primaryKeys = ["projectId", "songId"],
     foreignKeys = [
         ForeignKey(
@@ -19,7 +19,7 @@ import androidx.room.ForeignKey
         )
     ]
 )
-data class ProjectSongJoin(
+data class ProjectSong(
     val projectId: Int,
     val songId: Int
 )

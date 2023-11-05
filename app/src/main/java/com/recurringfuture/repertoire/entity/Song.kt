@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.sql.Date
 
-@Entity
+@Entity(tableName = "song")
 data class Song(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
