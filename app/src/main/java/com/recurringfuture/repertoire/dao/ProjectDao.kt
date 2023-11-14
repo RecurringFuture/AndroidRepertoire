@@ -2,20 +2,16 @@ package com.recurringfuture.repertoire.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
-import androidx.room.Insert
 import androidx.room.Query
-import androidx.room.Update
+import androidx.room.Upsert
 import com.recurringfuture.repertoire.entity.Project
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface ProjectDao {
 
-    @Insert
-    suspend fun insert(project: Project)
-
-    @Update
-    suspend fun update(project: Project)
+    @Upsert
+    suspend fun upsert(project: Project)
 
     @Delete
     suspend fun delete(project: Project)

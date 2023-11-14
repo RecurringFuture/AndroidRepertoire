@@ -1,8 +1,9 @@
 package com.recurringfuture.repertoire.dao
 
 import androidx.room.Dao
-import androidx.room.Insert
+import androidx.room.Delete
 import androidx.room.Query
+import androidx.room.Upsert
 import com.recurringfuture.repertoire.entity.Project
 import com.recurringfuture.repertoire.entity.ProjectSong
 import com.recurringfuture.repertoire.entity.Song
@@ -11,8 +12,11 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface ProjectSongsDao {
 
-    @Insert
-    suspend fun insert(projectSong: ProjectSong)
+    @Upsert
+    suspend fun upsert(projectSong: ProjectSong)
+
+    @Delete
+    suspend fun delete(projectSong: ProjectSong)
 
     @Query(
         "SELECT * FROM song INNER JOIN project_song ON " +
