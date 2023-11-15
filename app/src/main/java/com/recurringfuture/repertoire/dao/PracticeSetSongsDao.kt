@@ -23,12 +23,12 @@ interface PracticeSetSongsDao {
                 "song.id=practice_set_song.songId WHERE " +
                 "practice_set_song.practiceSetId=:practiceSetId"
     )
-    fun getSongsForPracticeSet(practiceSetId: Int): Flow<List<Song>>
+    fun fetchSongsForPracticeSet(practiceSetId: Int): Flow<List<Song>>
 
     @Query(
         "SELECT * FROM practice_set INNER JOIN practice_set_song ON " +
                 "practice_set.id=practice_set_song.practiceSetId WHERE " +
                 "practice_set_song.songId=:songId"
     )
-    fun getPracticeSetForSong(songId: Int): Flow<List<PracticeSet>>
+    fun fetchPracticeSetForSong(songId: Int): Flow<List<PracticeSet>>
 }

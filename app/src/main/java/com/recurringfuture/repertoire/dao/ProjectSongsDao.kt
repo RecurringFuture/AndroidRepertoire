@@ -23,12 +23,12 @@ interface ProjectSongsDao {
                 "song.id=project_song.songId WHERE " +
                 "project_song.projectId=:projectId"
     )
-    fun getSongsForProject(projectId: Int): Flow<List<Song>>
+    fun fetchSongsForProject(projectId: Int): Flow<List<Song>>
 
     @Query(
         "SELECT * FROM project INNER JOIN project_song ON " +
                 "project.id=project_song.projectId WHERE " +
                 "project_song.songId=:songId"
     )
-    fun getProjectsForSong(songId: Int): Flow<List<Project>>
+    fun fetchProjectsForSong(songId: Int): Flow<List<Project>>
 }

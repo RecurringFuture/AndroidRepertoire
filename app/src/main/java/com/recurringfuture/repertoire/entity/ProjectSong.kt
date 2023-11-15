@@ -2,10 +2,11 @@ package com.recurringfuture.repertoire.entity
 
 import androidx.room.Entity
 import androidx.room.ForeignKey
+import androidx.room.PrimaryKey
 
 @Entity(
     tableName = "project_song",
-    primaryKeys = ["projectId", "songId"],
+//    primaryKeys = ["projectId", "songId"],
     foreignKeys = [
         ForeignKey(
             entity = Project::class,
@@ -20,6 +21,8 @@ import androidx.room.ForeignKey
     ]
 )
 data class ProjectSong(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int,
     val projectId: Int,
     val songId: Int
 )

@@ -245,7 +245,7 @@ public class LibrariesForLibsInPluginsBlock extends AbstractExternalDependencyFa
         public VersionAccessors(ProviderFactory providers, DefaultVersionCatalog config) { super(providers, config); }
 
             /**
-             * Returns the version associated to this alias: agp (8.3.0-alpha11)
+             * Returns the version associated to this alias: agp (8.3.0-alpha13)
              * If the version is a rich version and that its not expressible as a
              * single version string, then an empty string is returned.
              * This version was declared in catalog libs.versions.toml
@@ -285,7 +285,7 @@ public class LibrariesForLibsInPluginsBlock extends AbstractExternalDependencyFa
             public Provider<String> getKotlin() { return getVersion("kotlin"); }
 
             /**
-             * Returns the version associated to this alias: material (1.9.0)
+             * Returns the version associated to this alias: material (1.10.0)
              * If the version is a rich version and that its not expressible as a
              * single version string, then an empty string is returned.
              * This version was declared in catalog libs.versions.toml
@@ -362,7 +362,7 @@ public class LibrariesForLibsInPluginsBlock extends AbstractExternalDependencyFa
         public CoreVersionAccessors(ProviderFactory providers, DefaultVersionCatalog config) { super(providers, config); }
 
             /**
-             * Returns the version associated to this alias: core.ktx (1.10.1)
+             * Returns the version associated to this alias: core.ktx (1.12.0)
              * If the version is a rich version and that its not expressible as a
              * single version string, then an empty string is returned.
              * This version was declared in catalog libs.versions.toml

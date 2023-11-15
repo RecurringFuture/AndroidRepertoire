@@ -2,10 +2,12 @@ package com.recurringfuture.repertoire.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.sql.Date
 
 @Entity(tableName = "practice_set")
 class PracticeSet(
+    @PrimaryKey(autoGenerate = true)
     val id: Int,
     val title: String,
     val description: String,
